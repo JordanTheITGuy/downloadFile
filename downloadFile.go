@@ -9,6 +9,7 @@ import (
 )
 
 func DownloadFile(url string) error {
+	//Eval
 	resp, err := http.Get(url)
 	filename := path.Base(resp.Request.URL.Path)
 	out, _ := os.Create(filename)
